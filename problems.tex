@@ -101,6 +101,31 @@ The instructions for submitting your work are given on the Moodle page.
 Write, from scratch, a function in Racket that uses a brute-force algorithm that takes a single positive integer and return true if the number is a prime and false otherwise. Call the function \mintinline{racket}{decide-prime}.
 
 
+\question
+Write, from scratch, a function in Racket that takes a positive integer $n_0$ as input and returns a list by recursively applying the following operation, starting with the input number.
+$$
+n_{i+1} =
+\left\{
+  \begin{array}{ll}
+    3n_i + 1 & \textrm{if } n_i \textrm{ is odd}  \\
+		\frac{n_i}{2} & \textrm{otherwise} \\
+	\end{array}
+\right.
+$$
+End the recursion when (or if) the number becomes $1$.
+Call the function \mintinline{racket}{collatz-list}.
+So, \mintinline{racket}{collatz-list} should return a list whose first element is $n_0$, the second element is $n_1$, and so on.
+For example:
+\begin{minted}{racket}
+> (collatz-list 5)
+'(5 16 8 4 2 1)
+> (collatz-list 9)
+'(9 28 14 7 22 11 34 17 52 26 13 40 20 10 5 16 8 4 2 1)
+> (collatz-list 2)
+'(2 1)
+\end{minted}
+
+
 \end{questions}
 
 \bibliographystyle{plain}
