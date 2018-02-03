@@ -94,6 +94,8 @@
 The following exercises should be completed in the Racket programming language~\cite{racketwebsite}.
 Remember to plan your work and make regular commits to your repository.
 The instructions for submitting your work are given on the Moodle page.
+Note that ``from scratch'' means using only \mintinline{racket}{cons}, \mintinline{racket}{car}, \mintinline{racket}{cdr}, \mintinline{racket}{define}, \mintinline{racket}{lambda}, \mintinline{racket}{if}, \mintinline{racket}{null}, \mintinline{racket}{null?}, \mintinline{racket}{cond}, \mintinline{racket}{=} and the four basic numerical operators (\mintinline{racket}{+}, \mintinline{racket}{-}, \mintinline{racket}{*}, \mintinline{racket}{/}).
+Other basic functions may be allowed, but please confirm their use with the lecturer.
 
 \begin{questions}
 
@@ -123,6 +125,21 @@ For example:
 '(9 28 14 7 22 11 34 17 52 26 13 40 20 10 5 16 8 4 2 1)
 > (collatz-list 2)
 '(2 1)
+\end{minted}
+
+
+\question
+Write, from scratch, two functions in Racket.
+The first is called \mintinline{racket}{lcycle}.
+It takes a list as input and returns the list cyclically shifted one place to the left.
+The second is called \mintinline{racket}{rcycle}, and it shifts the list cyclically shifted one place to the right.
+
+For example:
+\begin{minted}{racket}
+> (lcycle (list 1 2 3 4 5))
+'(2 3 4 5 1)
+> (rcycle (list 1 2 3 4 5))
+'(5 1 2 3 4)
 \end{minted}
 
 
