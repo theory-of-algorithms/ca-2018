@@ -94,6 +94,8 @@
 The following exercises should be completed in the Racket programming language~\cite{racketwebsite}.
 Remember to plan your work and make regular commits to your repository.
 The instructions for submitting your work are given on the Moodle page.
+Note that ``from scratch'' means using only \mintinline{racket}{cons}, \mintinline{racket}{car}, \mintinline{racket}{cdr}, \mintinline{racket}{define}, \mintinline{racket}{lambda}, \mintinline{racket}{if}, \mintinline{racket}{null}, \mintinline{racket}{null?}, \mintinline{racket}{cond}, \mintinline{racket}{map}, \mintinline{racket}{=} and the basic numerical operators (\mintinline{racket}{+}, \mintinline{racket}{-}, \mintinline{racket}{*}, \mintinline{racket}{/}, \mintinline{racket}{modulo}).
+Other basic functions may be allowed, but please confirm their use with the lecturer.
 
 \begin{questions}
 
@@ -126,6 +128,33 @@ For example:
 \end{minted}
 
 \question
+Write, from scratch, two functions in Racket.
+The first is called \mintinline{racket}{lcycle}.
+It takes a list as input and returns the list cyclically shifted one place to the left.
+The second is called \mintinline{racket}{rcycle}, and it shifts the list cyclically shifted one place to the right.
+
+For example:
+\begin{minted}{racket}
+> (lcycle (list 1 2 3 4 5))
+'(2 3 4 5 1)
+> (rcycle (list 1 2 3 4 5))
+'(5 1 2 3 4)
+\end{minted}
+
+
+\question
+Write a function \mintinline{racket}{sublsum} in Racket that takes a list (of integers) as input and returns a list of sublists of it that sum to zero.
+For this problem, you can use the \mintinline{racket}{combinations} built-in function.
+Note the order of the sublists and their elements doesn't matter.
+For example:
+\begin{minted}{racket}
+> (sublsum (list 1 2 3 4 -5))
+'((2 3 -5) (-5 1 4))
+> (sublsum (list 1 2 3 4 5))
+'()
+\end{minted}
+
+\question
 Write a function \mintinline{racket}{hamming-weight} in Racket that takes a list $l$ as input and returns the number of non-zero elements in it.
 For example:
 \begin{minted}{racket}
@@ -140,7 +169,6 @@ For example:
 > (hamming-distance (list 1 0 1 0 1 1 1 0) (list 1 1 1 1 0 0 0 0))
 5
 \end{minted}
-
 
 
 \end{questions}
